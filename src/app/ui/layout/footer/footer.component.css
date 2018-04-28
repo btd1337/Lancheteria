@@ -1,0 +1,14 @@
+footer {
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid #ccc;
+}
+
+footer .branding {	
+	padding: 0 1rem;
+}
+
+footer .version {
+	margin-left: auto !important;
+	padding: 0 1rem;
+}
