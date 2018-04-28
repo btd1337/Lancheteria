@@ -1,2 +1,2 @@
-# Angular-ClarityUI-Starter
-This repository contains a standard setting to use Angular + Clarity UI
+# Lancheteria
+This repository contains a basic web application to delivery food systems developed in Angular
