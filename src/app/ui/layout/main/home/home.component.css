@@ -1,0 +1,12 @@
+.content-area {
+	background-color:#FFF;
+	margin: 5% 10%;
+	flex: 1 1 auto;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	padding: 1rem 1rem 1rem 1rem;
+
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}

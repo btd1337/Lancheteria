@@ -6,13 +6,14 @@ import { HeaderComponent } from './layout/header/header.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { MainComponent } from './layout/main/main.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { HomeComponent } from './layout/main/home/home.component';
 
 @NgModule({
   imports: [
     ClarityModule,
     CommonModule
   ],
-  declarations: [LayoutComponent, HeaderComponent, SidebarComponent, MainComponent, FooterComponent],
+  declarations: [LayoutComponent, HeaderComponent, SidebarComponent, MainComponent, FooterComponent, HomeComponent],
   exports: [LayoutComponent]
 })
 export class UiModule { }
