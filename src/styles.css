@@ -2,3 +2,7 @@
 
 @import "app/ui/layout/footer/footer.component.css";
 @import "app/ui/layout/header/header.component.css";
+
+button:focus{
+	outline: none;
+}
