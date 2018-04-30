@@ -2,6 +2,7 @@
 	background-color: #F3F6FA;
 }
 
-.btn {
-	margin: .25rem .5rem .25rem .20rem !important;
+.center {
+	margin-left: auto !important;
+	margin-right: auto !important;
 }
