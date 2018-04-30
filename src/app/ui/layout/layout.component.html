@@ -1,15 +1,16 @@
 <clr-main-container>
   <clr-header class="header-3">
     <div class="branding">
-      <a href="#" class="nav-link">
-		<img src="assets/img/store1.svg" class="logo" alt="Logo made by https://www.flaticon.com/authors/smashicons from www.flaticon.com is licensed by http://creativecommons.org/licenses/by/3.0/ CC 3.0 BY" id="logo">
-		<!-- <clr-icon shape="vm-bug"></clr-icon> -->
+      <a routerLink="/" class="nav-link">
+        <img src="assets/img/store1.svg" class="logo" alt="Logo made by https://www.flaticon.com/authors/smashicons from www.flaticon.com is licensed by http://creativecommons.org/licenses/by/3.0/ CC 3.0 BY"
+          id="logo">
+        <!-- <clr-icon shape="vm-bug"></clr-icon> -->
         <span class="title">Lancheteria</span>
       </a>
     </div>
     <div class="header-nav" [clr-nav-level]="1">
-      <a href="#" class="active nav-link nav-text">Restaurantes</a>
-      <a href="#" class="nav-link nav-text">Sobre</a>
+      <a routerLink="/restaurants" routerLinkActive="active" class="nav-link nav-text">Restaurantes</a>
+      <a routerLink="/about" routerLinkActive="active" class="nav-link nav-text">Sobre</a>
     </div>
   </clr-header>
 

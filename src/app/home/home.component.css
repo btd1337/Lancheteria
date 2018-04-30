@@ -1,5 +1,5 @@
 .jumbotron {
-  background-color: #FFF;
+  background-color: #FFFFFF;
   margin: 5% 5%;
   flex: 1 1 auto;
   overflow-y: auto;
@@ -17,3 +17,4 @@
 		padding: 10% 0;
 	}
 }
+

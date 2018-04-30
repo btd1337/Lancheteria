@@ -2,8 +2,8 @@
 
 @import "app/ui/layout/layout.component.css";
 @import "app/ui/layout/footer/footer.component.css";
-@import "app/ui/layout/header/header.component.css";
-@import "app/ui/layout/main/home/home.component.css";
+@import "app/ui/layout/main/main.component.css";
+@import "app/home/home.component.css";
 
 button:focus{
 	outline: none;

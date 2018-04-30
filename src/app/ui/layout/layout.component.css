@@ -1,18 +1,13 @@
-.content-area {
-	padding-left: 1rem;
-  padding-right: 1rem;
-  margin-top: auto;
-	margin-bottom: auto;
-	overflow-y: scroll;
-}
-
-.content-container {
-	background-color: #F3F6FA;
-}
-
 .center {
 	margin-left: auto !important;
 	margin-right: auto !important;
+}
+
+.header .branding .logo {
+	margin-right: 11px;
+  min-width: none;
+  height: 36px;
+  width: 36px;
 }
 
 .v-middle{

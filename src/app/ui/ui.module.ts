@@ -1,19 +1,19 @@
+import { RouterModule } from '@angular/router';
 import { ClarityModule } from '@clr/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './layout/layout.component';
-import { HeaderComponent } from './layout/header/header.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { MainComponent } from './layout/main/main.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import { HomeComponent } from './layout/main/home/home.component';
 
 @NgModule({
   imports: [
     ClarityModule,
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
-  declarations: [LayoutComponent, HeaderComponent, SidebarComponent, MainComponent, FooterComponent, HomeComponent],
+  declarations: [LayoutComponent, SidebarComponent, MainComponent, FooterComponent],
   exports: [LayoutComponent]
 })
 export class UiModule { }
