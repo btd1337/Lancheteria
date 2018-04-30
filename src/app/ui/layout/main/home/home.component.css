@@ -1,14 +1,18 @@
 .jumbotron {
-	background-color:#FFF;
-	margin: 5% 10%;
-	flex: 1 1 auto;
-	overflow-y: auto;
-	-webkit-overflow-scrolling: touch;
-	padding: 1rem 1rem 1rem 1rem;
+  background-color: #FFF;
+  margin: 5% 5%;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem 1rem 1rem 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: auto;
+}
 
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-
-	min-height: 50%;
+@media (min-width: 768px) {
+	.jumbotron {
+		margin: 5% 10%;
+	}
 }
