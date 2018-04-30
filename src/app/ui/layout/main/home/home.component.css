@@ -4,7 +4,7 @@
   flex: 1 1 auto;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 2rem 1rem 2rem 1rem;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -14,5 +14,6 @@
 @media (min-width: 768px) {
 	.jumbotron {
 		margin: 5% 10%;
+		padding: 10% 0;
 	}
 }
