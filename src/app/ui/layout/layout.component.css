@@ -3,6 +3,10 @@
 	margin-right: auto !important;
 }
 
+.right {
+	float: right;
+}
+
 .header .branding .logo {
 	margin-right: 11px;
   min-width: none;
@@ -13,4 +17,16 @@
 .v-middle{
 	padding-bottom: auto !important;
 	padding-top: auto !important;
+}
+
+.card-img img {
+	height: 20vh;
+  width: auto;
+}
+
+.card-media-block .card-media-image {
+	height: 3.65rem;
+  width: auto;
+	max-height: 6rem;
+  max-width: 6rem;
 }

@@ -8,19 +8,23 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
+import { RestaurantsComponent } from './restaurants/restaurants.component';
+import { ClarityModule } from '@clr/angular';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    RestaurantsComponent
   ],
   exports: [
     RouterModule
   ],
   imports: [
     BrowserModule,
+    ClarityModule,
     RouterModule.forRoot(ROUTES),
     UiModule
   ],
