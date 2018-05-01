@@ -126,6 +126,10 @@ MIT
 MIT
 MIT
 
+@clr/angular@0.11.15
+MIT
+MIT
+
 @angular/common@5.2.10
 MIT
 MIT
@@ -135,10 +139,6 @@ MIT
 MIT
 
 @angular/animations@5.2.10
-MIT
-MIT
-
-@clr/angular@0.11.15
 MIT
 MIT
 
