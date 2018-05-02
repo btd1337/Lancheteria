@@ -10,8 +10,9 @@ import { Status } from './status';
 export class RestaurantComponent implements OnInit {
 
 	@Input() restaurant: Restaurant;
-	fakeArray = new Array(5);
+	fakeArray: any;
 	status: Status;
+	rest = false;
 
 	constructor() {
 	}
@@ -28,6 +29,11 @@ export class RestaurantComponent implements OnInit {
 				message: 'Fechado'
 			};
 		}
+		const lenght = Math.trunc( this.restaurant.rating );
+		if ((this.restaurant.rating - lenght) > 0) {
+			this.rest = true;
+		}
+		console.log(lenght);
+		this.fakeArray = new Array(lenght);
 	}
-
 }
