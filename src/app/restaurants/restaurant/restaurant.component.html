@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="card-header">
+    {{ restaurant.name }}
+    <span class="right">
+      <clr-icon *ngFor="let star of fakeArray; let index = index" shape="star" class="is-solid"></clr-icon>
+    </span>
+  </div>
+
+  <div class="card-block">
+    <div class="card-media-block">
+      <img [src]="restaurant.imagePath" class="card-media-image">
+      <div class="card-media-description">
+        <span class="card-media-title">
+          {{ restaurant.category }}
+        </span>
+        <span class="card-media-text">
+          {{ restaurant.deliveryEstimate }}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-footer">
+    <span>
+      <clr-icon shape="status.icon" class="is-solid"></clr-icon>
+      {{ status.message }}
+    </span>
+    <span class="right floated">
+      <clr-icon shape="star" [class.is-solid]="!restaurant.favorite"></clr-icon>
+      Favorito
+    </span>
+  </div>
+</div>
+
+<pre>{{ status.icon }}</pre>

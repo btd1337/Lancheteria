@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { ClarityModule } from '@clr/angular';
+import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ClarityModule } from '@clr/angular';
     AppComponent,
     AboutComponent,
     HomeComponent,
-    RestaurantsComponent
+    RestaurantsComponent,
+    RestaurantComponent
   ],
   exports: [
     RouterModule
