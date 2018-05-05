@@ -33,7 +33,6 @@ export class RestaurantComponent implements OnInit {
 		if ((this.restaurant.rating - lenght) > 0) {
 			this.rest = true;
 		}
-		console.log(lenght);
 		this.fakeArray = new Array(lenght);
 	}
 }
