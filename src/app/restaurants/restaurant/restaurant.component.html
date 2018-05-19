@@ -1,4 +1,4 @@
-<div class="card">
+<a [routerLink]="['/restaurants', restaurant.id]" class="card clickable">
   <div class="card-header">
     {{ restaurant.name }}
     <span class="right">
@@ -31,4 +31,4 @@
       Favorito
     </span>
   </div>
-</div>
+</a>

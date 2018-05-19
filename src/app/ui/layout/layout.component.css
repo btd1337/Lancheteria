@@ -30,3 +30,8 @@
 	max-height: 6rem;
   max-width: 6rem;
 }
+
+.card.clickable:hover {
+	box-shadow: 0 0.125rem 0 0 rgba(40, 19, 54, 0.60);
+	border-color: rgba(40, 19, 54, 0.60);
+}

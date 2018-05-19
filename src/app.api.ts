@@ -1,1 +1,1 @@
-export const LANCHETERIA_API = 'https://api.myjson.com/bins/';
+export const LANCHETERIA_API = 'http://localhost:3000';

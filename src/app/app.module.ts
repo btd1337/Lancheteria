@@ -13,6 +13,11 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { ClarityModule } from '@clr/angular';
 import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
 import { RestaurantService } from './restaurants/restaurants.service';
+import { RestaurantDetailComponent } from './restaurants/restaurant-detail/restaurant-detail.component';
+import { MenuComponent } from './restaurants/restaurant-detail/menu/menu.component';
+import { ShoppingCartComponent } from './restaurants/restaurant-detail/shopping-cart/shopping-cart.component';
+import { MenuItemComponent } from './restaurants/restaurant-detail/menu-item/menu-item.component';
+import { ReviewsComponent } from './restaurants/restaurant-detail/reviews/reviews.component';
 
 
 @NgModule({
@@ -21,7 +26,12 @@ import { RestaurantService } from './restaurants/restaurants.service';
 		AboutComponent,
 		HomeComponent,
 		RestaurantsComponent,
-		RestaurantComponent
+		RestaurantComponent,
+		RestaurantDetailComponent,
+		MenuComponent,
+		ShoppingCartComponent,
+		MenuItemComponent,
+		ReviewsComponent
 	],
 	exports: [
 		RouterModule

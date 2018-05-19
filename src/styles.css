@@ -1,10 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "app/app.component.css";
 @import "app/ui/layout/layout.component.css";
 @import "app/ui/layout/footer/footer.component.css";
 @import "app/ui/layout/main/main.component.css";
 @import "app/home/home.component.css";
-
-button:focus{
-	outline: none;
-}
+@import "app/restaurants/restaurants.component.css";
+@import "app/restaurants/restaurant-detail/restaurant-detail.component.css";
+@import "app/restaurants/restaurant-detail/menu/menu.component.css";

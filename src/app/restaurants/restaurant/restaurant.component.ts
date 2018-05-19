@@ -1,6 +1,7 @@
 import { Restaurant } from './restaurant.model';
 import { Component, OnInit, Input } from '@angular/core';
 import { Status } from './status';
+import { RestaurantService } from '../restaurants.service';
 
 @Component({
 	selector: 'lan-restaurant',
@@ -14,25 +15,13 @@ export class RestaurantComponent implements OnInit {
 	status: Status;
 	rest = false;
 
-	constructor() {
+	constructor(private restaurantService: RestaurantService) {
 	}
 
 	ngOnInit() {
-		if (this.restaurant.open) {
-			this.status = {
-				icon: 'success-standard',
-				message: 'Aberto'
-			};
-		} else {
-			this.status = {
-				icon: 'no-access',
-				message: 'Fechado'
-			};
-		}
+		this.status = this.restaurantService.getStatusIcon(this.restaurant);
 		const lenght = Math.trunc( this.restaurant.rating );
-		if ((this.restaurant.rating - lenght) > 0) {
-			this.rest = true;
-		}
+		this.rest = this.restaurantService.checkRatingRest(this.restaurant, lenght);
 		this.fakeArray = new Array(lenght);
 	}
 }
