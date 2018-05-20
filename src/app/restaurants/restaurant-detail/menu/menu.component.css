@@ -3,3 +3,9 @@
 	margin: 0 0 0 .5rem;
 	line-height: 1.5rem;
 }
+
+@media only screen and (max-width : 768px) {
+	lan-menu {
+		display: block;
+	}
+}

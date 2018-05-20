@@ -5,3 +5,11 @@ button:focus{
 .row {
 	height: 100%;
 }
+
+.btn-group {
+	margin: 0 .5rem;
+}
+
+.btn-tab {
+	background-color: #F3F6FA;
+}

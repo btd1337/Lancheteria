@@ -1,47 +1,46 @@
 <!--INICIO DO CARRINHO-->
-<div class="box box-solid">
-  <div class="box-header">
-    <i class="fa fa-shopping-cart"></i>
+<div class="card">
+	<div class="card-header">
+		<clr-icon shape="shopping-cart" class="is-solid"></clr-icon>
+		Carrinho
+	</div>
 
-    <h3 class="box-title">Carrinho</h3>
-  </div>
-  <!-- /.box-header -->
-  <div class="box-body">
-    <div class="table-responsive">
-      <table class="table">
-        <tbody>
-          <tr>
-            <th style="width:60%">Cerveja:</th>
+	<div class="card-block">
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item">
+				<span class="item-shopping">Cerveja</span>
+				<span class="price">R$ 6,00</span>
+			</li>
+			<li class="list-group-item">
+				<span class="item-shopping">Pork Burguer</span>
+				<span class="price">R$ 22,00</span>
+			</li>
+			<li class="list-group-item">
+				<clr-icon shape="truck"></clr-icon>
+				<span class="item-shopping"> Frete</span>
+				<span class="price">R$ 8,00</span>
+			</li>
+			<li class="list-group-item">
+				<clr-icon shape="calculator"></clr-icon>
+				<span class="item-shopping"> Total</span>
+				<span class="price">
+					<strong>R$ 80,90</strong>
+				</span>
+			</li>
+		</ul>
+	</div>
 
-            <td class="text-right">R$ 6,00</td>
-
-          </tr>
-          <tr>
-            <th>Pork Burger</th>
-
-            <td class="text-right">R$ 22,00</td>
-          </tr>
-          <tr>
-            <th>Frete:</th>
-
-            <td class="text-right">R$ 8,00</td>
-          </tr>
-          <tr>
-            <th>Total:</th>
-
-            <td class="text-right">R$ 80,90</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="box-footer">
-    <div class="pull-right">
-      <button type="button" class="btn btn-danger">
-        <i class="fa fa-trash"></i> Limpar</button>
-      <a href="order.html" class="btn btn-success">
-        <i class="fa fa-credit-card"></i> Fechar Pedido</a>
-    </div>
+	<div class="card-footer">
+    <div class="row flex-items-xs-center">
+      <div class="btn-group">
+        <a href="order.html" class="btn btn-success-outline">
+          <clr-icon shape="trash"></clr-icon> Fechar Pedido
+        </a>
+        <button class="btn btn-danger-outline">
+          <clr-icon shape="credit-card"></clr-icon> Limpar
+        </button>
+      </div>
+      </div>
   </div>
 </div>
 <!-- FIM DO CARRINHO -->

@@ -1,3 +1,29 @@
+@media only screen and (max-width : 768px) {
+	#card-media-block {
+		display: block;
+	}
+	
+	.brand-logo {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+
+lan-menu {
+	display: flex;
+	width: 100%;
+}
+
+.item-total {
+	font-weight: 600;
+}
+
 .status-restaurant {
 	margin-left: .5rem;
+}
+
+.price {
+	float: right;
+	font-weight: 400;
 }
