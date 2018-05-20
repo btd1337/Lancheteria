@@ -1,3 +1,4 @@
+import { MenuItem } from './restaurant-detail/menu-item/menu-item.model';
 import { HttpClient } from '@angular/common/http';
 import { Restaurant } from './restaurant/restaurant.model';
 import { Observable } from 'rxjs/Observable';
@@ -51,7 +52,7 @@ export class RestaurantService {
 		return this.http.get(`${LANCHETERIA_API}/restaurants/${id}/reviews`);
 	}
 
-	menuOfRestaurant(id: string): Observable<any> {
-		return this.http.get(`${LANCHETERIA_API}/restaurants/${id}/menu`);
+	menuOfRestaurant(id: string): Observable<MenuItem[]> {
+		return this.http.get<MenuItem[]>(`${LANCHETERIA_API}/restaurants/${id}/menu`);
 	}
 }

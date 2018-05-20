@@ -1,36 +1,12 @@
 <!--INÍCIO DO MENU -->
-<div class="col-xs-12	col-sm-12	col-md-6 col-lg-8	col-xl-9">
+<div class="flex col-xs-12	col-sm-12	col-md-6 col-lg-8	col-xl-9">
 
-	<div class="row">
-      <div class="col-xs-12	col-sm-12	col-md-12 col-lg-4 col-xl-4" *ngFor="let item of menu | async">
-          <div class="card">
-            <div class="card-header">
-              {{ item.name }}
-            </div>
-          
-            <div class="card-block">
-              <div class="card-media-block">
-                <img [src]="item.imagePath" class="card-media-image">
-                <div class="card-media-description">
-                  <span class="card-media-text">
-                    {{ item.description }}
-                  </span>
-                </div>
-              </div>
-            </div>
-          
-            <div class="card-footer">
-              <div class="row flex-items-xs-between">
-                <label class="item-price">{{ item.price | currency: 'BRL' }}</label>
-                <button class="btn btn-link">
-                  <clr-icon shape="plus-circle" class="is-solid"></clr-icon>
-                  Adicionar
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-  </div>
+			<lan-menu-item 
+				*ngFor="let item of menu | async" 
+				[menuItem]="item"
+				(add)="addMenuItem($event)"
+				class="col-xs-12	col-sm-12	col-md-12 col-lg-4 col-xl-4">
+			</lan-menu-item>
 
 </div>
 <div class="col-xs-12	col-sm-12	col-md-6 col-lg-4	col-xl-3">

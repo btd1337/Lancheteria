@@ -1,3 +1,26 @@
-<p>
-  menu-item works!
-</p>
+<div class="card">
+	<div class="card-header">
+		{{ menuItem.name }}
+	</div>
+
+	<div class="card-block">
+		<div class="card-media-block">
+			<img [src]="menuItem.imagePath" class="card-media-image">
+			<div class="card-media-description">
+				<span class="card-media-text">
+					{{ menuItem.description }}
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="card-footer">
+		<div class="row flex-items-xs-between">
+			<label class="item-price">{{ menuItem.price | currency: 'BRL' }}</label>
+			<button (click)="emitAddEvent()" class="btn btn-link">
+				<clr-icon shape="plus-circle" class="is-solid"></clr-icon>
+				Adicionar
+			</button>
+		</div>
+	</div>
+</div>
