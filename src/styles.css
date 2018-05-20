@@ -8,3 +8,4 @@
 @import "app/restaurants/restaurants.component.css";
 @import "app/restaurants/restaurant-detail/restaurant-detail.component.css";
 @import "app/restaurants/restaurant-detail/menu/menu.component.css";
+@import "app/restaurants/restaurant-detail/reviews/reviews.component.css";

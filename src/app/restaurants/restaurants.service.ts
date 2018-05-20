@@ -46,4 +46,12 @@ export class RestaurantService {
 			return false;
 		}
 	}
+
+	reviewsOfRestaurant(id: string): Observable<any> {
+		return this.http.get(`${LANCHETERIA_API}/restaurants/${id}/reviews`);
+	}
+
+	menuOfRestaurant(id: string): Observable<any> {
+		return this.http.get(`${LANCHETERIA_API}/restaurants/${id}/menu`);
+	}
 }

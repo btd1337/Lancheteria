@@ -13,3 +13,7 @@ button:focus{
 .btn-tab {
 	background-color: #F3F6FA;
 }
+
+.card-rating {
+	margin: 0 0 0 auto;
+}
