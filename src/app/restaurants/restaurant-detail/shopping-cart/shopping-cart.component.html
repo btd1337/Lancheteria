@@ -5,16 +5,19 @@
 		Carrinho
 	</div>
 
-	<div class="card-block">
+	<div *ngIf="!items().length" class="card-block">
+		<p class="text-center">
+			Seu carrinho está vazio!
+		</p>
+	</div>
+
+	<div *ngIf="items().length" class="card-block">
 		<ul class="list-group list-group-flush">
-			<li class="list-group-item">
-				<span class="item-shopping">Cerveja</span>
-				<span class="price">R$ 6,00</span>
+			<li *ngFor="let item of items()" class="list-group-item">
+				<span class="item-shopping">{{ item.menuItem.name }}</span>
+				<span class="price">{{ item.value() | currency:'BRL' }}</span>
 			</li>
-			<li class="list-group-item">
-				<span class="item-shopping">Pork Burguer</span>
-				<span class="price">R$ 22,00</span>
-			</li>
+
 			<li class="list-group-item">
 				<clr-icon shape="truck"></clr-icon>
 				<span class="item-shopping"> Frete</span>
@@ -24,13 +27,13 @@
 				<clr-icon shape="calculator"></clr-icon>
 				<span class="item-shopping"> Total</span>
 				<span class="price">
-					<strong>R$ 80,90</strong>
+					<strong>{{total() | currency:'BRL'}}</strong>
 				</span>
 			</li>
 		</ul>
 	</div>
 
-	<div class="card-footer">
+	<div *ngIf="items().length" class="card-footer">
     <div class="row flex-items-xs-center">
       <div class="btn-group">
         <a href="order.html" class="btn btn-success-outline">

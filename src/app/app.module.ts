@@ -18,6 +18,7 @@ import { MenuComponent } from './restaurants/restaurant-detail/menu/menu.compone
 import { ShoppingCartComponent } from './restaurants/restaurant-detail/shopping-cart/shopping-cart.component';
 import { MenuItemComponent } from './restaurants/restaurant-detail/menu-item/menu-item.component';
 import { ReviewsComponent } from './restaurants/restaurant-detail/reviews/reviews.component';
+import { ShoppingCartService } from './restaurants/restaurant-detail/shopping-cart/shopping-cart.service';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { ReviewsComponent } from './restaurants/restaurant-detail/reviews/review
 	],
 	providers: [
 		HttpClient,
-		RestaurantService
+		RestaurantService,
+		ShoppingCartService
 	],
 	bootstrap: [AppComponent]
 })

@@ -8,12 +8,12 @@ import { MainComponent } from './layout/main/main.component';
 import { FooterComponent } from './layout/footer/footer.component';
 
 @NgModule({
-  imports: [
-    ClarityModule,
-    CommonModule,
-    RouterModule
-  ],
-  declarations: [LayoutComponent, SidebarComponent, MainComponent, FooterComponent],
-  exports: [LayoutComponent]
+	imports: [
+		ClarityModule,
+		CommonModule,
+		RouterModule
+	],
+	declarations: [LayoutComponent, SidebarComponent, MainComponent, FooterComponent],
+	exports: [LayoutComponent]
 })
 export class UiModule { }

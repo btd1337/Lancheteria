@@ -61,6 +61,7 @@
     }
   },
   "defaults": {
+    "lintFix": true,
     "styleExt": "css",
     "component": {}
   }
