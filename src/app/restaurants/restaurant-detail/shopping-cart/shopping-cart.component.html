@@ -13,17 +13,22 @@
 
 	<div *ngIf="items().length" class="card-block">
 		<ul class="list-group list-group-flush">
-			<li *ngFor="let item of items()" class="list-group-item">
-				<span class="item-shopping">{{ item.menuItem.name }}</span>
+			<li *ngFor="let item of items()" class="list-group-item flex">
+				<span>
+					<a (click)="removeItem(item)" class="btn btn-link btn-sm danger">
+						<clr-icon shape="times"></clr-icon>
+					</a>
+				</span>
+				<span class="item-shopping">({{ item.quantity }}x) {{ item.menuItem.name }}</span>
 				<span class="price">{{ item.value() | currency:'BRL' }}</span>
 			</li>
 
-			<li class="list-group-item">
+			<li class="list-group-item flex">
 				<clr-icon shape="truck"></clr-icon>
 				<span class="item-shopping"> Frete</span>
 				<span class="price">R$ 8,00</span>
 			</li>
-			<li class="list-group-item">
+			<li class="list-group-item flex">
 				<clr-icon shape="calculator"></clr-icon>
 				<span class="item-shopping"> Total</span>
 				<span class="price">
@@ -34,16 +39,16 @@
 	</div>
 
 	<div *ngIf="items().length" class="card-footer">
-    <div class="row flex-items-xs-center">
-      <div class="btn-group">
-        <a href="order.html" class="btn btn-success-outline">
-          <clr-icon shape="trash"></clr-icon> Fechar Pedido
-        </a>
-        <button class="btn btn-danger-outline">
-          <clr-icon shape="credit-card"></clr-icon> Limpar
-        </button>
-      </div>
-      </div>
-  </div>
+		<div class="row flex-items-xs-center">
+			<div class="btn-group">
+				<a href="order.html" class="btn btn-success-outline">
+					<clr-icon shape="trash"></clr-icon> Fechar Pedido
+				</a>
+				<button (click)="clear()" class="btn btn-danger-outline">
+					<clr-icon shape="credit-card"></clr-icon> Limpar
+				</button>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- FIM DO CARRINHO -->

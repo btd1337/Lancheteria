@@ -1,8 +1,16 @@
-button:focus{
-	outline: none;
+button:focus {
+	outline: none !important;
+}
+
+a:focus {
+	outline: none !important;
 }
 
 .flex {
+	display: flex;
+}
+
+.flex-wrap {
 	display: flex;
 	flex-wrap: wrap;
 }

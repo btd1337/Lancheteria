@@ -32,6 +32,6 @@ lan-reviews {
 }
 
 .price {
-	float: right;
 	font-weight: 400;
+	margin: 0 0 0 auto;
 }

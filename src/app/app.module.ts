@@ -20,6 +20,12 @@ import { MenuItemComponent } from './restaurants/restaurant-detail/menu-item/men
 import { ReviewsComponent } from './restaurants/restaurant-detail/reviews/reviews.component';
 import { ShoppingCartService } from './restaurants/restaurant-detail/shopping-cart/shopping-cart.service';
 
+import { LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+
+registerLocaleData(localePt);
+
 
 @NgModule({
 	declarations: [
@@ -47,7 +53,8 @@ import { ShoppingCartService } from './restaurants/restaurant-detail/shopping-ca
 	providers: [
 		HttpClient,
 		RestaurantService,
-		ShoppingCartService
+		ShoppingCartService,
+		{ provide: LOCALE_ID, useValue: 'pt-BR' }
 	],
 	bootstrap: [AppComponent]
 })
