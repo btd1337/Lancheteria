@@ -41,11 +41,11 @@
 	<div *ngIf="items().length" class="card-footer">
 		<div class="row flex-items-xs-center">
 			<div class="btn-group">
-				<a href="order.html" class="btn btn-success-outline">
-					<clr-icon shape="trash"></clr-icon> Fechar Pedido
+				<a routerLink="/order" class="btn btn-success-outline">
+					<clr-icon shape="credit-card"></clr-icon> Fechar Pedido
 				</a>
 				<button (click)="clear()" class="btn btn-danger-outline">
-					<clr-icon shape="credit-card"></clr-icon> Limpar
+						<clr-icon shape="trash"></clr-icon> Limpar
 				</button>
 			</div>
 		</div>

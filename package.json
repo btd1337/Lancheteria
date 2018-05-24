@@ -7,7 +7,7 @@
     "start": "ng serve --aot",
     "build": "ng build --prod",
     "test": "ng test",
-    "lint": "ng lint -- --type-check",
+    "lint": "ng lint",
     "e2e": "ng e2e",
     "publish": "ng build --prod --base-href /Lancheteria/ && gh-pages -d dist"
   },

@@ -1,0 +1,194 @@
+<section class="content-header">
+	<h1>Finalize o seu pedido</h1>
+</section>
+
+<section class="content">
+	<section class="invoice">
+
+		<form>
+			<section class="form-block">
+				<label>Endereço de Entrega:</label>
+				<div class="form-group row">
+
+					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						<label for="address">
+							<clr-icon shape="check"></clr-icon> Endereço
+						</label>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						<input type="text" id="address">
+						<span class="help-block"></span>
+					</div>
+
+					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						<label for="number">
+							<clr-icon shape="check"></clr-icon> Número
+						</label>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						<input type="text" id="number">
+						<span class="help-block"></span>
+					</div>
+
+					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						<label class="control-label sr-only" for="inputSuccess">
+							<clr-icon shape="check"></clr-icon>
+						</label>
+						<input type="text" class="form-control" id="inputSuccess" placeholder="Complemento">
+						<span class="help-block"></span>
+					</div>
+				</div>
+			</section>
+			<!-- /.row -->
+
+			<!-- Table row -->
+			<div class="row">
+				<div class="col-xs-12">
+					<p class="lead">Itens do Pedido:</p>
+				</div>
+				<div class="col-xs-12 table-responsive">
+
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th class="text-center">Quantidade</th>
+								<th>Item</th>
+								<th>Descrição</th>
+								<th class="text-right">Subtotal</th>
+								<th class="text-right"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="text-center">
+									<a class="btn btn-link btn-sm">
+										<clr-icon shape="minus"></clr-icon>
+									</a>
+									1
+									<a class="btn btn-link btn-sm">
+										<clr-icon shape="plus"></clr-icon>
+									</a>
+								</td>
+								<td>Cup Cake</td>
+
+								<td>Recheado com doce de leite</td>
+								<td class="text-right">R$ 10,00</td>
+								<td class="text-right">
+									<a class="btn btn-link btn-sm">
+										<clr-icon shape="times"></clr-icon>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">
+									<a class="btn btn-link btn-sm">
+										<clr-icon shape="minus"></clr-icon>
+									</a>
+									1
+									<a class="btn btn-link btn-sm">
+										<clr-icon shape="plus"></clr-icon>
+									</a>
+								</td>
+								<td>Croissant</td>
+
+								<td>Recheado com presunto e queijo</td>
+								<td class="text-right">R$ 10,00</td>
+								<td class="text-right">
+									<a class="btn btn-link btn-sm">
+										<clr-icon shape="times"></clr-icon>
+									</a>
+								</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.row -->
+			<br>
+			<div class="row">
+				<!-- accepted payments column -->
+				<div class="col-sm-6 col-xs-12">
+					<div class="form-group">
+						<label>Forma de Pagamento</label>
+						<div class="radio">
+							<input [checked]=true id="dinheiro" name="gridRadios" type="radio">
+							<label for="dinheiro">
+								Dinheiro
+							</label>
+						</div>
+						<div class="radio">
+							<input [checked]=false id="debito" name="gridRadios" type="radio">
+							<label for="debito">
+								Cartão de Débito
+							</label>
+						</div>
+						<div class="radio">
+							<input [checked]=false id="credito" name="gridRadios" type="radio">
+							<label for="credito">
+								Cartão de Crédito
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-xs-12">
+
+					<!--INICIO DO CARRINHO-->
+					<div class="card">
+						<div class="card-header">
+							Frete e Total
+						</div>
+
+						<div *ngIf="itens === 0" class="card-block">
+							<p class="text-center">
+								Seu carrinho está vazio!
+							</p>
+						</div>
+
+						<div *ngIf="itens > 0" class="card-block">
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item flex">
+									<span class="item-shopping">Itens</span>
+									<span class="price">R$ 20,00</span>
+								</li>
+
+								<li class="list-group-item flex">
+									<clr-icon shape="truck"></clr-icon>
+									<span class="item-shopping"> Frete</span>
+									<span class="price">R$ 8,00</span>
+								</li>
+								<li class="list-group-item flex">
+									<clr-icon shape="calculator"></clr-icon>
+									<span class="item-shopping"> Total</span>
+									<span class="price">
+										<strong>R$ 28,00</strong>
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<div *ngIf="itens > 0" class="card-footer">
+							<div class="row flex-items-xs-center">
+								<div class="btn-group">
+									<a routerLink="/order" class="btn btn-success-outline">
+										<clr-icon shape="credit-card"></clr-icon> Concluir Pedido
+									</a>
+									<button (click)="clear()" class="btn btn-danger-outline">
+											<clr-icon shape="trash"></clr-icon> Limpar
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- FIM DO CARRINHO -->
+				</div>
+				<!-- /.col -->
+			</div>
+
+		</form>
+
+	</section>
+</section>
+<!-- FIM DO CONTEUDO-->
