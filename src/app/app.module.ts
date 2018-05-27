@@ -24,6 +24,7 @@ import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { OrderComponent } from './order/order.component';
+import { FormsModule } from '@angular/forms';
 
 registerLocaleData(localePt);
 
@@ -48,6 +49,7 @@ registerLocaleData(localePt);
 	imports: [
 		BrowserModule,
 		ClarityModule,
+		FormsModule,
 		HttpClientModule,
 		RouterModule.forRoot(ROUTES),
 		UiModule

@@ -3,9 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { Restaurant } from './restaurant/restaurant.model';
 import { Observable } from 'rxjs/Observable';
 
-import { LANCHETERIA_API } from './../../app.api';
+
 import { Injectable } from '@angular/core';
 import { Status } from './restaurant/status';
+import { LANCHETERIA_API } from '../app.api';
 
 @Injectable()
 export class RestaurantService {

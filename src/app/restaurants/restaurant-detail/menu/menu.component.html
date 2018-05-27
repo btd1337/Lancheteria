@@ -1,17 +1,20 @@
 <!--INÍCIO DO MENU -->
-<div class="flex-wrap col-xs-12	col-sm-12	col-md-6 col-lg-8	col-xl-9">
+<div *ngIf="menu.length" class="flex-wrap col-xs-12	col-sm-12	col-md-6 col-lg-8	col-xl-9">
 
-			<lan-menu-item 
-				*ngFor="let item of menu | async" 
-				[menuItem]="item"
-				(add)="shoppingCart.addItem($event)"
-				class="col-xs-12	col-sm-12	col-md-12 col-lg-4 col-xl-4">
-			</lan-menu-item>
+	<lan-menu-item *ngFor="let item of menu" [menuItem]="item" (add)="shoppingCart.addItem($event)" class="col-xs-12	col-sm-12	col-md-12 col-lg-4 col-xl-4">
+	</lan-menu-item>
+
 
 </div>
+
+<div *ngIf="!menu.length" class="flex-wrap col-xs-12	col-sm-12	col-md-6 col-lg-8	col-xl-9">
+	<h4 class="center" id="aviso">
+		<clr-icon shape="sad-face"></clr-icon>
+		No momento, este restaurante não possui itens disponíveis em seu menu.
+	</h4>
+</div>
+
 <div class="col-xs-12	col-sm-12	col-md-6 col-lg-4	col-xl-3">
 	<lan-shopping-cart #shoppingCart></lan-shopping-cart>
 </div>
 <!-- FIM DO MENU -->
-
-

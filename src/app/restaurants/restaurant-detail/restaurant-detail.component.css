@@ -12,6 +12,7 @@
 
 lan-menu {
 	display: flex;
+	width: 100%;
 }
 
 lan-reviews {
