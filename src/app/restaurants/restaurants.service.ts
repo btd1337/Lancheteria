@@ -1,7 +1,7 @@
 import { MenuItem } from './restaurant-detail/menu-item/menu-item.model';
 import { HttpClient } from '@angular/common/http';
 import { Restaurant } from './restaurant/restaurant.model';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 
 import { Injectable } from '@angular/core';
