@@ -10,8 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "publish": "ng build --prod --base-href /Lancheteria/ && gh-pages -d dist",
-    "postinstall": "ng build --aot -prod",
-    "deploy": "git push origin master && git push heroku master"
+    "postinstall": "ng build --aot -prod"
   },
   "private": true,
   "dependencies": {
