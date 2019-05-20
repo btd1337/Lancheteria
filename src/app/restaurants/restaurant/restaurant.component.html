@@ -9,7 +9,7 @@
 
   <div class="card-block">
     <div class="card-media-block">
-      <img [src]="restaurant.imagePath" class="card-media-image">
+      <img [src]="restaurant.imagePath" class="card-media-image" src-fallback="{{ placeholder }}">
       <div class="card-media-description">
         <span class="card-media-title">
           {{ restaurant.category }}

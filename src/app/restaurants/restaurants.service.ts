@@ -1,12 +1,12 @@
-import { MenuItem } from './restaurant-detail/menu-item/menu-item.model';
-import { HttpClient } from '@angular/common/http';
-import { Restaurant } from './restaurant/restaurant.model';
 import { Observable } from 'rxjs';
 
-
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
+import { environment } from '../../environments/environment';
+import { MenuItem } from './restaurant-detail/menu-item/menu-item.model';
+import { Restaurant } from './restaurant/restaurant.model';
 import { Status } from './restaurant/status';
-import { LANCHETERIA_API } from '../app.api';
 
 @Injectable()
 export class RestaurantService {
@@ -17,11 +17,11 @@ export class RestaurantService {
 	constructor(private http: HttpClient) {}
 
 	getRestaurants(): Observable<Restaurant[]> {
-		return this.http.get<Restaurant[]>(`${LANCHETERIA_API}/${this.endpoint}`);
+		return this.http.get<Restaurant[]>(`${environment.API}/${this.endpoint}`);
 	}
 
 	getRestaurant(id: string): Observable<Restaurant> {
-		return this.http.get<Restaurant>(`${LANCHETERIA_API}/${this.endpoint}/${id}`);
+		return this.http.get<Restaurant>(`${environment.API}/${this.endpoint}/${id}`);
 	}
 
 	getStatusIcon(restaurant: Restaurant): Status {
@@ -50,10 +50,10 @@ export class RestaurantService {
 	}
 
 	reviewsOfRestaurant(id: string): Observable<any> {
-		return this.http.get(`${LANCHETERIA_API}/restaurants/${id}/reviews`);
+		return this.http.get(`${environment.API}/restaurants/${id}/reviews`);
 	}
 
 	menuOfRestaurant(id: string): Observable<MenuItem[]> {
-		return this.http.get<MenuItem[]>(`${LANCHETERIA_API}/restaurants/${id}/menu`);
+		return this.http.get<MenuItem[]>(`${environment.API}/restaurants/${id}/menu/items`);
 	}
 }

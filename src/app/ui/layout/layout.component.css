@@ -25,6 +25,7 @@
 }
 
 .card-media-block .card-media-image {
+	border-radius: .125rem;
 	height: 3.65rem;
   width: auto;
 	max-height: 6rem;

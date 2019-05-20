@@ -1,9 +1,10 @@
-import { ErrorHandler } from './../../utils/errors/app.error-handler';
-import { Status } from './../restaurant/status';
-import { Restaurant } from './../restaurant/restaurant.model';
 import { Component, OnInit } from '@angular/core';
-import { RestaurantService } from '../restaurants.service';
 import { ActivatedRoute } from '@angular/router';
+
+import { ErrorHandler } from '../../utils/errors/app.error-handler';
+import { Restaurant } from '../restaurant/restaurant.model';
+import { Status } from '../restaurant/status';
+import { RestaurantService } from '../restaurants.service';
 
 @Component({
 	selector: 'lan-restaurant-detail',
@@ -38,9 +39,9 @@ export class RestaurantDetailComponent implements OnInit {
 
 	initializeRestaurantsData() {
 		this.status = this.restaurantService.getStatusIcon(this.restaurant);
-			const lenght = Math.trunc( this.restaurant.rating );
-			this.rest = this.restaurantService.checkRatingRest(this.restaurant, lenght);
-			this.fakeArray = new Array(lenght);
+		const lenght = this.restaurant.rating ? Math.trunc( this.restaurant.rating ) : 0;
+		this.rest = this.restaurantService.checkRatingRest(this.restaurant, lenght);
+		this.fakeArray = new Array(lenght);
 	}
 
 }

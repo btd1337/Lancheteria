@@ -1,7 +1,8 @@
-import { Restaurant } from './restaurant.model';
-import { Component, OnInit, Input } from '@angular/core';
-import { Status } from './status';
+import { Component, Input, OnInit } from '@angular/core';
+
 import { RestaurantService } from '../restaurants.service';
+import { Restaurant } from './restaurant.model';
+import { Status } from './status';
 
 @Component({
 	selector: 'lan-restaurant',
@@ -14,13 +15,14 @@ export class RestaurantComponent implements OnInit {
 	fakeArray: any;
 	status: Status;
 	rest = false;
+	placeholder = 'assets/img/restaurants/default.png';
 
 	constructor(private restaurantService: RestaurantService) {
 	}
 
 	ngOnInit() {
 		this.status = this.restaurantService.getStatusIcon(this.restaurant);
-		const lenght = Math.trunc( this.restaurant.rating );
+		const lenght = this.restaurant.rating ? Math.trunc( this.restaurant.rating ) : 0;
 		this.rest = this.restaurantService.checkRatingRest(this.restaurant, lenght);
 		this.fakeArray = new Array(lenght);
 	}

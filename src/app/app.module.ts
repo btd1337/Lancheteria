@@ -1,30 +1,35 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Routes, RouterModule } from '@angular/router';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { UiModule } from './ui/ui.module';
+import { ImgFallbackModule } from 'ngx-img-fallback';
 
-import { ROUTES } from './app.routes';
-
-import { AppComponent } from './app.component';
-import { AboutComponent } from './about/about.component';
-import { HomeComponent } from './home/home.component';
-import { RestaurantsComponent } from './restaurants/restaurants.component';
-import { ClarityModule } from '@clr/angular';
-import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
-import { RestaurantService } from './restaurants/restaurants.service';
-import { RestaurantDetailComponent } from './restaurants/restaurant-detail/restaurant-detail.component';
-import { MenuComponent } from './restaurants/restaurant-detail/menu/menu.component';
-import { ShoppingCartComponent } from './restaurants/restaurant-detail/shopping-cart/shopping-cart.component';
-import { MenuItemComponent } from './restaurants/restaurant-detail/menu-item/menu-item.component';
-import { ReviewsComponent } from './restaurants/restaurant-detail/reviews/reviews.component';
-import { ShoppingCartService } from './restaurants/restaurant-detail/shopping-cart/shopping-cart.service';
-
-import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import localePt from '@angular/common/locales/pt';
-import { OrderComponent } from './order/order.component';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
+import { ClarityModule } from '@clr/angular';
+
+import { AboutComponent } from './about/about.component';
+import { AppComponent } from './app.component';
+import { ROUTES } from './app.routes';
+import { HomeComponent } from './home/home.component';
+import { OrderComponent } from './order/order.component';
+import { MenuItemComponent } from './restaurants/restaurant-detail/menu-item/menu-item.component';
+import { MenuComponent } from './restaurants/restaurant-detail/menu/menu.component';
+import {
+	RestaurantDetailComponent
+} from './restaurants/restaurant-detail/restaurant-detail.component';
+import { ReviewsComponent } from './restaurants/restaurant-detail/reviews/reviews.component';
+import {
+	ShoppingCartComponent
+} from './restaurants/restaurant-detail/shopping-cart/shopping-cart.component';
+import {
+	ShoppingCartService
+} from './restaurants/restaurant-detail/shopping-cart/shopping-cart.service';
+import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
+import { RestaurantsComponent } from './restaurants/restaurants.component';
+import { RestaurantService } from './restaurants/restaurants.service';
+import { UiModule } from './ui/ui.module';
 
 registerLocaleData(localePt);
 
@@ -51,6 +56,7 @@ registerLocaleData(localePt);
 		ClarityModule,
 		FormsModule,
 		HttpClientModule,
+		ImgFallbackModule,
 		RouterModule.forRoot(ROUTES),
 		UiModule
 	],
