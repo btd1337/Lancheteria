@@ -1,7 +1,10 @@
 export interface Restaurant {
 	id: string;
 	name: string;
-	category: string;
+	category: {
+		id: number;
+		name: string;
+	};
 	deliveryEstimate: string;
 	rating: number;
 	imagePath: string;

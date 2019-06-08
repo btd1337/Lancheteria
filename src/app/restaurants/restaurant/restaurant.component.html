@@ -12,10 +12,10 @@
       <img [src]="restaurant.imagePath" class="card-media-image" src-fallback="{{ placeholder }}">
       <div class="card-media-description">
         <span class="card-media-title">
-          {{ restaurant.category }}
+          {{ restaurant.category.name }}
         </span>
         <span class="card-media-text">
-          {{ restaurant.deliveryEstimate }}
+          {{ restaurant.deliveryEstimate }} min
         </span>
       </div>
     </div>
